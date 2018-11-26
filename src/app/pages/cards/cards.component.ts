@@ -10,6 +10,7 @@ import { Card } from './card.model';
 })
 export class CardsComponent implements OnInit {
   cards: Card[];
+  cardToDelete;
 
   constructor(private cardsService: CardsService) { }
 
@@ -20,6 +21,18 @@ export class CardsComponent implements OnInit {
           this.cards = cards;
         })
       )
+  }
+
+  // Modal to Confirm Delete of a Card
+  modalToDeleteCard(event, card) {
+    let openModalBtn = document.getElementById('delete-modal');
+    openModalBtn.click();
+    this.cardToDelete = card;
+  }
+
+  // Delete Card
+  deleteCard() {
+    this.cardsService.deleteCard(this.cardToDelete);
   }
 
 }

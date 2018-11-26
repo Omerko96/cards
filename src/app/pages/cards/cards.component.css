@@ -9,6 +9,7 @@
   line-height: 19.5px;
   letter-spacing: 0.1px;
   margin-bottom: 16px;
+  position: relative;
 
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -31,6 +32,32 @@
   line-height: 27px;
   padding: 12px 20px;
 }
+.card .card-header button {
+  display: none;
+}
+.card .card-header .delete-card {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e51c23 linear-gradient(180deg, #e93e44, #e51c23) repeat-x;
+  padding: 3px 5px;
+  color: #ffffff;
+  font-size: 22px;
+  opacity: 0;
+  cursor: pointer;
+  
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -ms-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
 .card .image {
   height: 200px;
   width: 100%;
@@ -45,4 +72,9 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
+}
+
+/* Animations for Card on Hover */
+.card:hover .card-header .delete-card {
+  opacity: 1;
 }

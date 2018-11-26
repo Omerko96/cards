@@ -9,10 +9,9 @@ body {
   outline: none !important;
 }
 
-.btn-primary {
-  background: #2196F3 linear-gradient(180deg, #42a6f5, #2196F3) repeat-x;
+/* Global Styles for Buttons */
+.btn {
   border: none;
-  color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.1px;
@@ -32,14 +31,8 @@ body {
   -o-transition: all ease 0.4s;
   transition: all ease 0.4s;
 }
-.btn-primary:hover {
-  background-color: #0d87e9 !important;
-}
-.btn-primary:active {
-  color: #fff;
-  background-color: #0c7cd5;
+.btn:active {
   background-image: none;
-  border-color: #0b75c9;
 
   -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
@@ -47,19 +40,68 @@ body {
   -o-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
-.btn-primary:focus {
-  background-color: #0d87e9 !important;
+.btn:focus {
   border: none;
 
-  -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
-  -moz-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
-  -ms-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
-  -o-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
-  box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+  -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0 0 0 2px rgba(204, 204, 204, 1);
+  -ms-box-shadow: 0 0 0 2px rgba(204, 204, 204, 1);
+  -o-box-shadow: 0 0 0 2px rgba(204, 204, 204, 1);
+  box-shadow: 0 0 0 2px rgba(204, 204, 204, 1);
+}
+
+/* Button Default */
+.btn-default {
+  background: #fff linear-gradient(180deg, white, #fff) repeat-x;
+  color: #212121;
+}
+.btn-default:hover {
+  background-color: #f0f0f0;
+}
+.btn-default:active {
+  color: #212121;
+  background-color: #e6e5e5;
+  border-color: #dfdfdf;
+}
+.btn-default:focus {
+  background-color: #dfdfdf !important;
+}
+
+/* Button Primary */
+.btn-primary {
+  background: #2196F3 linear-gradient(180deg, #42a6f5, #2196F3) repeat-x;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: #0d87e9 !important;
+}
+.btn-primary:active {
+  color: #fff;
+  background-color: #0c7cd5;
+  border-color: #0b75c9;
+}
+.btn-primary:focus {
+  background-color: #0d87e9 !important;
+}
+
+/* Button Danger */
+.btn-danger {
+  background: #e51c23 linear-gradient(180deg, #e93e44, #e51c23) repeat-x;
+  color: #ffffff;
+}
+.btn-danger:hover {
+  background-color: #cb171e;
+}
+.btn-danger:active {
+  color: #fff;
+  background-color: #b9151b;
+  border-color: #ad1419;
+}
+.btn-danger:focus {
+  background-color: #ad1419 !important;
 }
 
 /* Jumbotrons */
-/* Jumpotron */
 .jumbotron {
   padding: 64px 32px;
 }
@@ -75,4 +117,17 @@ body {
 .jumbotron p {
   font-size: 13px;
   font-weight: 400;
+}
+
+/* Modals */
+.modal-content {
+  border-radius: 3px;
+}
+.modal-content .close {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 34px;
+  font-weight: 300;
+  padding: 8px 16px;
 }

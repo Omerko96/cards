@@ -6,9 +6,15 @@
   </div>  <!-- End of Jumbotron -->
 </div>
 
-<div class="col-md-4" *ngFor="let card of cards">
+<div class="col-md-4" *ngFor="let card of cards; let i = index">
   <div class="card">
-    <h3 class="card-header">{{ card.title }}</h3>
+    <h3 class="card-header">
+      {{ card.title }}
+      <span class="delete-card">
+        <button type="button" class="modal-toggle" id="delete-modal" data-toggle="modal" data-target="#delete_modal"></button>
+        <span class="fa fa-trash" (click)="modalToDeleteCard($event, card)"></span>
+      </span>
+    </h3>
     <img src="{{ card.imagePath }}" alt="{{ card.title }}" class="image">
 
     <div class="card-body">
@@ -17,4 +23,27 @@
 
   </div>  <!-- End of Card -->
 </div> <!-- End of Card Loop -->
+
+<!-- Modal to Delete a Card -->
+<div class="modal fade" id="delete_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>  <!-- End of Modal Header --> 
+
+      <div class="modal-body">
+        Think twice, before you delete your card.
+      </div>  <!-- End of Modal Body -->
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteCard()">Delete</button>
+      </div>  <!-- End of Modal Footer -->
+
+    </div>  <!-- End of Modal Content -->
+  </div>  <!-- End of Modal Dialog -->
+</div>  <!-- End of Modal -->
 
