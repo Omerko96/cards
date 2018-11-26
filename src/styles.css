@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Buttons */
+.btn {
+  outline: none !important;
+}
+
+.btn-primary {
+  background: #2196F3 linear-gradient(180deg, #42a6f5, #2196F3) repeat-x;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  outline: 0;
+
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -ms-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.btn-primary:hover {
+  background-color: #0d87e9 !important;
+}
+.btn-primary:active {
+  color: #fff;
+  background-color: #0c7cd5;
+  background-image: none;
+  border-color: #0b75c9;
+
+  -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+  -ms-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.btn-primary:focus {
+  background-color: #0d87e9 !important;
+  border: none;
+
+  -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+  -moz-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+  -ms-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+  -o-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+  box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+}
+
+/* Jumbotrons */
+/* Jumpotron */
+.jumbotron {
+  padding: 64px 32px;
+}
+.jumbotron h1 {
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 86px;
+}
+.jumbotron .lead {
+  font-size: 16px;
+  font-weight: 300;
+}
+.jumbotron p {
+  font-size: 13px;
+  font-weight: 400;
+}
