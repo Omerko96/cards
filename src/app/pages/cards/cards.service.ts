@@ -29,6 +29,10 @@ export class CardsService {
     )
   }
 
+  addCard(card: Card) {
+    this.cardsCollection.add(card);
+  }
+
   // Delete Card
   deleteCard(card: Card) {
     this.cardDoc = this.afs.doc(`cards/${card.id}`);

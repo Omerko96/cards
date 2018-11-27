@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { environment } from '../environments/environment';
 
@@ -35,6 +36,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     CommonModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     RouterModule.forRoot(routes)

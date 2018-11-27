@@ -11,6 +11,11 @@ import { Card } from './card.model';
 export class CardsComponent implements OnInit {
   cards: Card[];
   cardToDelete;
+  card: Card = {
+    title: '',
+    description: '',
+    imagePath: ''
+  }
 
   constructor(private cardsService: CardsService) { }
 
@@ -28,6 +33,18 @@ export class CardsComponent implements OnInit {
     let openModalBtn = document.getElementById('delete-modal');
     openModalBtn.click();
     this.cardToDelete = card;
+  }
+
+  addCard(form) {
+    if(this.card.title != '' && this.card.description != '' && this.card.imagePath != '') {
+      this.cardsService.addCard(this.card);
+      form.reset();
+      document.getElementById('close').click();
+    }
+  }
+
+  clearForm(form) {
+    form.reset();
   }
 
   // Delete Card

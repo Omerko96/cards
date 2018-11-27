@@ -101,6 +101,40 @@ body {
   background-color: #ad1419 !important;
 }
 
+/* Button Warning */
+.btn-warning {
+  background: #ff9800 linear-gradient(180deg, #ffa726, #ff9800) repeat-x;
+  color: #ffffff;
+}
+.btn-warning:hover {
+  background-color: #e08600;
+}
+.btn-warning:active {
+  color: #fff;
+  background-color: #cc7a00;
+  border-color: #bf7200;
+}
+.btn-warning:focus {
+  background-color: #ff9800 !important;
+}
+
+/* Button Success */
+.btn-success {
+  background: #4CAF50 linear-gradient(180deg, #67bb6a, #4CAF50) repeat-x;
+  color: #ffffff;
+}
+.btn-success:hover {
+  background-color: #439a46;
+}
+.btn-success:active {
+  color: #fff;
+  background-color: #3d8b40;
+  border-color: #39833c;
+}
+.btn-success:focus {
+  background-color: #4CAF50 !important;
+}
+
 /* Jumbotrons */
 .jumbotron {
   padding: 64px 32px;
@@ -130,4 +164,42 @@ body {
   font-size: 34px;
   font-weight: 300;
   padding: 8px 16px;
+}
+
+/* Forms */
+form label {
+  margin-bottom: 8px;
+  color: #444444;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 19px;
+}
+form .form-control {
+  border: 0px;
+  border-bottom: 1px solid #666666;
+  color: #666;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 19px;
+  padding: 16px 0px;
+  outline: 0;
+  box-shadow: none;
+
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+form .form-control:focus {
+  border-bottom: 2px solid #2196F3;
+  box-shadow: none;
 }

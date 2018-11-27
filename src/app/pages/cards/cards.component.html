@@ -24,6 +24,12 @@
   </div>  <!-- End of Card -->
 </div> <!-- End of Card Loop -->
 
+<div class="col-md-4">
+  <div class="add-card">
+    <a href="#add_modal" class="modal-toggle" data-toggle="modal"><span class="fa fa-plus"></span></a>
+  </div>  <!-- End of Add Card -->
+</div>  <!-- End of Add Card -->
+
 <!-- Modal to Delete a Card -->
 <div class="modal fade" id="delete_modal">
   <div class="modal-dialog">
@@ -41,6 +47,48 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteCard()">Delete</button>
+      </div>  <!-- End of Modal Footer -->
+
+    </div>  <!-- End of Modal Content -->
+  </div>  <!-- End of Modal Dialog -->
+</div>  <!-- End of Modal -->
+
+<!-- Modal to Add a Card -->
+<div class="modal fade" id="add_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">Add new card</h4>
+      </div>  <!-- End of Modal Header --> 
+
+      <div class="modal-body">
+        <form (ngSubmit)="addCard(f)" #f="ngForm">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter Card Title" [(ngModel)]="card.title">
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" name="description" placeholder="Enter Card Description" [(ngModel)]="card.description">
+          </div>
+
+          <div class="form-group">
+            <label for="imagePath">Image:</label>
+            <input type="text" class="form-control" name="imagePath" placeholder="Link Card Image" [(ngModel)]="card.imagePath">
+          </div>
+
+          <div class="form-group text-right">
+            <input type="button" class="btn btn-warning" value="Clear" (click)="clearForm(f)">
+            <input type="submit" class="btn btn-success" value="Add">
+          </div>  
+        </form>
+      </div>  <!-- End of Modal Body -->
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
       </div>  <!-- End of Modal Footer -->
 
     </div>  <!-- End of Modal Content -->
