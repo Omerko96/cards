@@ -203,3 +203,14 @@ form .form-control:focus {
   border-bottom: 2px solid #2196F3;
   box-shadow: none;
 }
+form .help-block {
+  color: #e51c23;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1px;
+  margin-top: 4px;
+}
+form .ng-touched.ng-invalid {
+  border-bottom: 2px solid #b82f2f;
+}

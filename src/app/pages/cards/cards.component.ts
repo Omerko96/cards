@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 import { CardsService } from './cards.service';
 import { Card } from './card.model';
@@ -6,7 +7,22 @@ import { Card } from './card.model';
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.css']
+  styleUrls: ['./cards.component.css'],
+  animations: [
+    trigger('cardState', [
+      state('in', style({
+        opacity: 1,
+        transform: 'scale(1)'
+      })),
+      transition('void => *', [
+        style({
+          opacity: 0,
+          transform: 'scale(0.5)'
+        }),
+        animate(300)
+      ])
+    ])
+  ]
 })
 export class CardsComponent implements OnInit {
   cards: Card[];
@@ -35,14 +51,16 @@ export class CardsComponent implements OnInit {
     this.cardToDelete = card;
   }
 
+  // Add New Card
   addCard(form) {
-    if(this.card.title != '' && this.card.description != '' && this.card.imagePath != '') {
+    if(form.valid) {
       this.cardsService.addCard(this.card);
       form.reset();
       document.getElementById('close').click();
     }
   }
 
+  // Clear form for adding a new card
   clearForm(form) {
     form.reset();
   }
