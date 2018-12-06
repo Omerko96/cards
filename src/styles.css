@@ -9,6 +9,11 @@ body {
   outline: none !important;
 }
 
+/* Text Colors */
+.text-primary {
+  color: #2196F3;
+}
+
 /* Global Styles for Buttons */
 .btn {
   border: none;

@@ -14,6 +14,9 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { CardsService } from './pages/cards/cards.service';
+import { LoginComponent } from './auth/login/login.component';
+import { CustomLoginComponent } from './auth/custom-login/custom-login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 // Routes
 const routes: Routes = [
@@ -24,6 +27,18 @@ const routes: Routes = [
   {
     path: 'cards',
     component: CardsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'custom-login',
+    component: CustomLoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ]
 
@@ -32,7 +47,10 @@ const routes: Routes = [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    CardsComponent
+    CardsComponent,
+    LoginComponent,
+    CustomLoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
